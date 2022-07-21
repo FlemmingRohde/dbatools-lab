@@ -61,4 +61,4 @@ $config = Import-PowerShellDataFile -Path .\Config\Config.psd1
 # Add permissions for service accounts to backup folder
     # Both SQL Server Engine service accounts need to have access to the backup folder
     # You can find the service account names with the following once you've installed the instances:
-    Get-DbaService -ComputerName dbatoolslab -Type Engine
+    Get-DbaService -ComputerName $config.ComputerName -Type Engine
